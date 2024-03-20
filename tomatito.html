@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Para mi Novia!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    #loveButton {
+      background-color: pink;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin: 20px;
+    }
+    #secretMessage {
+      display: none;
+      font-size: 20px;
+      color: red;
+    }
+    #imageContainer {
+      margin-top: 50px;
+    }
+    .hiddenImage {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>¡Hola, amor!</h1>
+  <p>¡Te amo mucho! Haz clic en el botón:</p>
+  <button id="loveButton" onclick="showMessage()">¡Haz clic aquí!</button>
+  <p id="secretMessage">¡Eres la persona más maravillosa del mundo! Te amo con todo mi corazón ❤️</p>
+  <div id="imageContainer">
+    <img id="surpriseImage" class="hiddenImage" src="gatito.jpg" alt="¡Sorpresa!">
+  </div>
+  <script>
+    function showMessage() {
+      var message = document.getElementById("secretMessage");
+      message.style.display = "block";
+      var image = document.getElementById("surpriseImage");
+      image.classList.remove("hiddenImage");
+    }
+  </script>
+</body>
+</html>
